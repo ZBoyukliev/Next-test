@@ -13,6 +13,7 @@ import { Card } from "../../collections/Card/Card";
 
 const cardProps = [
     {
+        id: 1,
         title: "Brief",
         leftDescription: "Complete ",
         boldDescription: "brief writing or simple guidance ",
@@ -26,6 +27,7 @@ const cardProps = [
         }
     },
     {
+        id: 2,
         title: "Search",
         leftDescription: "in-depth agency search covering: ",
         boldDescription: "criteria matching, ",
@@ -39,6 +41,7 @@ const cardProps = [
         }
     },
     {
+        id: 3,
         title: "Pitch",
         leftDescription: "Comprehensive ",
         boldDescription: "pitch management ",
@@ -67,7 +70,7 @@ export const Main = ({ image, title, description, ctaText, ...props }) => {
                 </StyledImageContainer>
                 <StyledContentContainer>
                     {cardProps.map((card) => {
-                        return <Card width={card.width} title={card.title} image={card.image} leftDescription={card.leftDescription} boldDescription={card.boldDescription} rightDescription={card.rightDescription} />
+                        return <Card key={card.id} width={card.width} title={card.title} image={card.image} leftDescription={card.leftDescription} boldDescription={card.boldDescription} rightDescription={card.rightDescription} />
                     })}
                 </StyledContentContainer>
             </StyledInnerContentContainer>

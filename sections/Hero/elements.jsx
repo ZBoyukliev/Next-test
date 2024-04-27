@@ -4,12 +4,21 @@ import { Button, SectionContainer, SectionBigHeading, SectionSubheading } from "
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   align-items: center;
   max-width: 1640px;
+  @media (max-width: 1024px) {
+    width:100%;
+    flex-direction:column;
+  
+  }
 `;
 
 export const StyledGetStartedBtn = styled((props) => <Button {...props} variant="contained" color="main" />)`
   margin-top: 4.375rem;
   padding-top: 0;
   padding-bottom: 0;
+  @media (max-width: 1024px) {
+   
+    margin-top: 20px;
+  }
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
@@ -19,6 +28,7 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
 
 export const StyledDescription = styled((props) => <SectionSubheading {...props} />)`
   margin: 1.563rem 0 0;
+  
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
@@ -26,10 +36,23 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   width: 30%;
   margin-left: 11.125rem;
   font-family: sans-serif;
+  @media (max-width: 1024px) {
+    width:100%;
+    margin-left: 0;
+    text-align: center
+  }
 `;
 
 export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
   display: flex;
+  @media (max-width: 1024px) {
+    width:100%;
+    margin-left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 12px;
+  }
 `;
 
 export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
@@ -38,4 +61,13 @@ export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)
   width: 100%;
   height: 100%;
   margin-left: auto;
+
+  @media (max-width: 1024px) {
+    width:50%;
+    margin-left: 0;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
 `;

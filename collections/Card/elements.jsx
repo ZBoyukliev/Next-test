@@ -5,7 +5,7 @@ import { SectionContainer, SectionBigHeading, SectionSubheading } from "~/compon
 export const StyledCardContainer = styled(({  height, ...props }) => <SectionContainer {...props} />)`
   dispay:flex;
   align-items: center;
-  padding:48px 48px 48px 48px;
+  padding:48px;
   gap: 48px;
   background: #f3f3f3;
   border-radius: 8px;
@@ -19,12 +19,12 @@ export const StyledCardContainer = styled(({  height, ...props }) => <SectionCon
     border: 2px solid blue; 
     cursor: pointer;
   }
-
+  
   @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
+  padding:32px;
+
   }
+
 `;
 
 export const StyledTextContainer = styled((props) =>  <div {...props} />)`
@@ -47,7 +47,7 @@ export const StyledDescription = styled((props) => <SectionSubheading {...props}
   color: black;
   font-size:24px;
   font-family: sans-serif;
-  display: inline 
+  display: inline;
   
 `;
 
@@ -57,7 +57,8 @@ export const StyledBoldDescription = styled(({ ...props }) => <SectionSubheading
   color: black;
   font-family: sans-serif;
   font-size:24px;
-  display: inline 
+  display: inline;
+  
 `;
 
 export const StyledIconContainer = styled(({ ...props }) => <div {...props} />)`

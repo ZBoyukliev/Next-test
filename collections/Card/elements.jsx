@@ -19,6 +19,12 @@ export const StyledCardContainer = styled(({  height, ...props }) => <SectionCon
     border: 2px solid blue; 
     cursor: pointer;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
 `;
 
 export const StyledTextContainer = styled((props) =>  <div {...props} />)`
@@ -57,6 +63,4 @@ export const StyledBoldDescription = styled(({ ...props }) => <SectionSubheading
 export const StyledIconContainer = styled(({ ...props }) => <div {...props} />)`
   width:100px;
   height: 100px;
-
- 
 `
